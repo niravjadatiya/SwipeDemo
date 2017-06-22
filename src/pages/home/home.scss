@@ -1,0 +1,24 @@
+page-home {
+ .indicatorSegment
+    {
+        -webkit-transition: 0.3s all;
+        -moz-transition:  0.3s all;
+        -o-transition:  0.3s all;
+        transition:  0.3s all;
+        transform-origin: top 0 left 0;
+        width:50%;
+        height:2px;
+        background-color:rgba(138, 34, 40, 0.98) !important;;
+    }
+
+    .slide {
+        background: dodgerblue;
+        width: calc(100% /3);
+        height: 2px;
+        position: absolute;
+        left: 0;
+        top: calc(100% - 2px);
+        transition: left 0.3s ease-out;
+    }
+
+}

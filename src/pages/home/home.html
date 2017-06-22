@@ -1,0 +1,41 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Home</ion-title>
+    </ion-navbar>
+<div class="headertab">
+        <ion-segment [(ngModel)]="segment">
+
+            <ion-segment-button value="item1"  (click)="onClickSegment('1')"> <span> item 1</span> </ion-segment-button>
+
+            <ion-segment-button value="item2" (click)="onClickSegment('2')"> <span>item 2 </span> </ion-segment-button>
+			 <ion-segment-button value="item3" (click)="onClickSegment('3')"> <span>item 3 </span> </ion-segment-button>
+
+			 		<div id='indicator'class="indicatorSegment slide" >
+			 		</div>
+
+        </ion-segment>
+    </div>
+	<ion-list>
+  <ion-item>
+    <ion-range [(ngModel)]="singleValue" color="danger" pin="true" min="0" max="100" (ionChange)="onChangeSlider()"></ion-range>
+  </ion-item>
+	</ion-list>
+
+
+</ion-header>
+
+<ion-content padding>
+	   
+    <ion-slides #mySlider (ionSlideDidChange)="onSlideChanged()"  (ionSlideWillChange)="changeWillSlide($event)">
+        <ion-slide>
+			<h1>First</h1>
+        </ion-slide>
+		<ion-slide>
+			<h1>Second</h1>
+		</ion-slide>
+		<ion-slide>
+			<h1>Three</h1>
+		</ion-slide>
+		</ion-slides>
+</ion-content>
